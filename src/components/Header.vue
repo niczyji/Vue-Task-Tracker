@@ -1,6 +1,7 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
+    <!-- Button-Komponente, die auf Klick ein "toggle-add-task" Event auslöst. Text und Farbe ändern sich basierend auf dem "showAddTask"-Status. -->
     <Button
       @btn-click="$emit('toggle-add-task')"
       :text="showAddTask ? 'Close' : 'Add Task'"
@@ -20,7 +21,7 @@ export default {
       type: String,
       default: "Hello World",
     },
-    showAddTask: Boolean,
+    showAddTask: Boolean, // Boolean Prop für Toggle
   },
   components: {
     Button,

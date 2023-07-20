@@ -1,13 +1,18 @@
 <template>
+  <!-- Hauptanwendungskomponente -->
   <div class="container">
+    <!-- Header-Komponente, mit Event Listener für "toggle-add-task" -->
     <Header
       @toggle-add-task="toggleAddTask"
       title="Task Tracker"
       :showAddTask="showAddTask"
     />
+    <!-- Zeigt die Komponente "AddTask" an, wenn "showAddTask" true ist -->
     <div v-if="showAddTask">
+      <!-- AddTask-Komponente, mit Event Listener für "add-task" -->
       <AddTask @add-task="addTask" />
     </div>
+    <!-- Aufgaben-Komponente, mit Event Listener für "toggle-reminder" und "delete-task" -->
     <Tasks
       @toggle-reminder="toggleReminder"
       @delete-task="deleteTask"
@@ -31,7 +36,7 @@ export default {
   data() {
     return {
       tasks: [],
-      showAddTask: false,
+      showAddTask: false, // steuert die Anzeige der AddTask-Komponente
     };
   },
   methods: {
@@ -68,6 +73,7 @@ export default {
   },
   created() {
     this.tasks = [
+      // Beispiel Aufgaben
       {
         id: 1,
         text: "Diätplan erstellen",

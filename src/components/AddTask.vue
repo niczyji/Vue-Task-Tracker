@@ -27,6 +27,7 @@ export default {
   name: "AddTask",
   data() {
     return {
+      // Initiale Werte
       text: " ",
       day: "",
       reminder: false,
@@ -41,12 +42,13 @@ export default {
         return;
       }
 
+      // Generieren einer neuen eindeutigen ID für die Aufgabe
       const maxId = this.$parent.tasks.reduce(
         (max, task) => Math.max(max, task.id),
         0
       );
-      console.log(this.$parent.tasks);
 
+      // Erstellung der neuen Aufgabe
       const newTask = {
         id: maxId + 1,
         text: this.text,
@@ -54,8 +56,10 @@ export default {
         reminder: this.reminder,
       };
 
+      // Sendet ein "add-task"-Event an die übergeordnete Komponente mit der neuen Aufgabe als Argument
       this.$emit("add-task", newTask);
 
+      // Setzt die Felder des Formulars zurück
       this.text = "";
       this.day = "";
       this.reminder = false;

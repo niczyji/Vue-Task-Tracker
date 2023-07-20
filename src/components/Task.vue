@@ -1,10 +1,12 @@
 <template>
+  <!-- Eine Aufgabe wird mit doppeltem Klick als Erinnerung markiert und kann mit einem Klick auf das X gelöscht werden -->
   <div
     @dblclick="$emit('toggle-reminder', task.id)"
     :class="[task.reminder ? 'reminder' : '', 'task']"
   >
     <h3>
       {{ task.text }}
+      <!-- Das X-Symbol löst bei Klick das 'delete-task'-Ereignis aus und übergibt die ID der Aufgabe -->
       <i @click="$emit('delete-task', task.id)" class="fas fa-times"></i>
     </h3>
     <p>{{ task.day }}</p>

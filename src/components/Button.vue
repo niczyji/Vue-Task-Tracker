@@ -13,7 +13,8 @@ export default {
   },
   methods: {
     onClick() {
-      this.$emit("btn-click");
+      // Methode, die aufgerufen wird, wenn der Button angeklickt wird
+      this.$emit("btn-click"); // Sendet ein "btn-click"-Event an die übergeordnete Komponente
     },
   },
 };
