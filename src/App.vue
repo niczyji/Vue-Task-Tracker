@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <Header title="Task Tracker" />
+    <Header @toggle-add-task="toggleAddTask" title="Task Tracker" />
+    <div v-if="showAddTask">
+      <AddTask @add-task="addTask" />
+    </div>
     <Tasks
       @toggle-reminder="toggleReminder"
       @delete-task="deleteTask"
@@ -12,31 +15,51 @@
 <script>
 import Header from "./components/Header.vue";
 import Tasks from "./components/Tasks.vue";
+import AddTask from "./components/AddTask.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     Tasks,
+    AddTask,
   },
   data() {
     return {
       tasks: [],
+      showAddTask: false,
     };
   },
   methods: {
+    addTask(task) {
+      this.tasks = [...this.tasks, task];
+    },
     deleteTask(id) {
-      //console.log("Task", id);
-      //remove task
       if (confirm("Are you sure?")) {
         this.tasks = this.tasks.filter((task) => task.id !== id);
       }
     },
     toggleReminder(id) {
-      //console.log("test", id);
-      this.tasks = this.tasks.map((task) =>
+      console.log("test", id);
+      this.tasks = this.tasks.map((task) => {
+        if (task.id === id) {
+          return {
+            id: task.id,
+            text: task.text,
+            day: task.day,
+            reminder: !task.reminder,
+          };
+        } else {
+          return task;
+        }
+      });
+      // Shorter with Spread-Syntax
+      /*  this.tasks = this.tasks.map((task) =>
         task.id === id ? { ...task, reminder: !task.reminder } : task
-      );
+      ); */
+    },
+    toggleAddTask() {
+      this.showAddTask = !this.showAddTask;
     },
   },
   created() {
