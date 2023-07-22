@@ -10,7 +10,7 @@
       "id": 2,
       "text": "Sauna in Gym besuchen",
       "day": "March 3st at 1:30pm",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "id": 4,
       "text": "Einkaufen gehen",
       "day": "March 7st at 2:30pm",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 5,
@@ -34,7 +34,7 @@
       "id": 6,
       "text": "Hausputz",
       "day": "March 10st at 5:30pm",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 7,
@@ -46,7 +46,7 @@
       "id": 8,
       "text": "Steuererklärung machen",
       "day": "March 15st at 1:30pm",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 9,
@@ -58,7 +58,7 @@
       "id": 10,
       "text": "Zahnarzttermin",
       "day": "March 19st at 8:30am",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 11,
@@ -70,7 +70,7 @@
       "id": 12,
       "text": "Geburtstagsparty organisieren",
       "day": "March 23st at 7:00pm",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 13,
