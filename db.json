@@ -4,19 +4,19 @@
       "id": 1,
       "text": "Diätplan erstellen",
       "day": "March 1st at 2:30pm",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 2,
       "text": "Sauna in Gym besuchen",
       "day": "March 3st at 1:30pm",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 3,
       "text": "Vue Programieren lernen",
       "day": "March 5st at 11:30am",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 4,
@@ -34,12 +34,6 @@
       "id": 6,
       "text": "Hausputz",
       "day": "March 10st at 5:30pm",
-      "reminder": false
-    },
-    {
-      "id": 7,
-      "text": "Garten pflegen",
-      "day": "March 12st at 6:30pm",
       "reminder": false
     },
     {
