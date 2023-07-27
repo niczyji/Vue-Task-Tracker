@@ -1,4 +1,4 @@
-# crash2021
+# Vue Task Tracker
 
 ## Project setup
 ```
